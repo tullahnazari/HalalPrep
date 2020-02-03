@@ -23,7 +23,7 @@ class Results with ChangeNotifier {
 
   Future<void> fetchAndSetResults() async {
     final url =
-        'https://sweepsteaks-31629.firebaseio.com/results/$userId.json?auth=$authToken';
+        'https://halalprep.firebaseio.com/results/$userId.json?auth=$authToken';
     final response = await http.get(url);
     final List<ResultItem> loadedOrders = [];
     final extractedData = json.decode(response.body) as Map<String, dynamic>;
@@ -47,7 +47,7 @@ class Results with ChangeNotifier {
   Future<void> enterSweepstake(ResultItem result, Sweepstake sweepstake) async {
     //send https request
     final url =
-        'https://sweepsteaks-31629.firebaseio.com/results/$userId.json?auth=$authToken';
+        'https://halalprep.firebaseio.com/results/$userId.json?auth=$authToken';
     var title = sweepstake.title;
     final randomNumber = generateRandomNumber;
     try {
