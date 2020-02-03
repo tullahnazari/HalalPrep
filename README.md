@@ -1,4 +1,4 @@
-# sweepstakes
+# halal prep
 
 A new Flutter project.
 
